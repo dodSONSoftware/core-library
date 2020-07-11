@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("dodSON Software")]
 [assembly: AssemblyProduct("dodSON Software Core Library")]
-[assembly: AssemblyCopyright("Copyright © dodSON Software 2017-2020")]
+[assembly: AssemblyCopyright("Copyright © dodSON Software 2016-2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
