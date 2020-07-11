@@ -1,5 +1,3 @@
-**dodSON Software Core Library**
-
 The dodSON Software Core Library abstracts common programming tasks into sets of well researched, developed and documented types organized into separate, self-contained namespaces enabling rapid development of feature-rich applications and services which can be used independently. However, used together these namespaces provide the foundation for a configurable, packaged-deployed, plugin-based distributed programming framework with remote monitoring and control, standardized configuration, packaging, installation, logging and networking.
 
 ### Help File
