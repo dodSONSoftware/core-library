@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF38DA30-9F09-4E3B-9334-00C7228F28A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dodSON.Core</RootNamespace>
+    <AssemblyName>dodSON.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\dodSON.Core.XML</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDomain\AppDomain1.cs" />
+    <Compile Include="AppDomain\AppDomain2.cs" />
+    <Compile Include="AppDomain\AppDomain3.cs" />
+    <Compile Include="AppDomain\AppDomainHelper.cs" />
+    <Compile Include="AppDomain\TypeProxyFactory.cs" />
+    <Compile Include="Cache\CacheProcessor.cs" />
+    <Compile Include="Cache\CacheProcessorItemBase.cs" />
+    <Compile Include="Cache\ICacheProcessorItem.cs" />
+    <Compile Include="Cache\ICacheProcessorItemAdvanced.cs" />
+    <Compile Include="CommandLineInterface.Commands\CalculatorCommand.cs" />
+    <Compile Include="CommandLineInterface.Commands\DateTimeCommand.cs" />
+    <Compile Include="CommandLineInterface.Commands\RandomNumberCommand.cs" />
+    <Compile Include="CommandLineInterface\ArgsGenerator.cs" />
+    <Compile Include="CommandLineInterface.Commands\ClearScreenCommand.cs" />
+    <Compile Include="CommandLineInterface\CommandArguments.cs" />
+    <Compile Include="CommandLineInterface\CommandLineInterfaceHelper.cs" />
+    <Compile Include="CommandLineInterface\CommandLineInterfaceShared.cs" />
+    <Compile Include="CommandLineInterface.Commands\CommandsCommand.cs" />
+    <Compile Include="CommandLineInterface.Commands\ExitCommand.cs" />
+    <Compile Include="CommandLineInterface.Commands\HelpCommand.cs" />
+    <Compile Include="CommandLineInterface\IConsoleCommand.cs" />
+    <Compile Include="CommandLineInterface\MessagePump.cs" />
+    <Compile Include="CommandLineInterface\MessagePumpCommand.cs" />
+    <Compile Include="Common\ChecksumHelper.cs" />
+    <Compile Include="Common\ILockable.cs" />
+    <Compile Include="Common\ILockableView.cs" />
+    <Compile Include="Common\InstantiationHelper.cs" />
+    <Compile Include="Addon\ExtensionBase.cs" />
+    <Compile Include="Addon\ExtensionFactory.cs" />
+    <Compile Include="Addon\IAddon.cs" />
+    <Compile Include="Addon\IAddonFactory.cs" />
+    <Compile Include="Addon\PluginBase.cs" />
+    <Compile Include="Addon\PluginFactory.cs" />
+    <Compile Include="AppDomain\AppDomainTypeFactory.cs" />
+    <Compile Include="AppDomain\ITypeProxySponsorHelper.cs" />
+    <Compile Include="AppDomain\TypeProxySettings.cs" />
+    <Compile Include="AppDomain\TypeProxySponsor.cs" />
+    <Compile Include="Cache\Cache.cs" />
+    <Compile Include="Cache\CacheItem.cs" />
+    <Compile Include="Cache\CacheItemRemovedEventArgs.cs" />
+    <Compile Include="Cache\ICache.cs" />
+    <Compile Include="Cache\ICacheItem.cs" />
+    <Compile Include="Cache\ICacheValidater.cs" />
+    <Compile Include="Cache\ValidateNull.cs" />
+    <Compile Include="Cache\ValidateTime.cs" />
+    <Compile Include="Common\ByteArrayHelper.cs" />
+    <Compile Include="Common\ByteCountHelper.cs" />
+    <Compile Include="Common\DateTimeHelper.cs" />
+    <Compile Include="Common\IStateChangeTracking.cs" />
+    <Compile Include="Common\IStateChangeView.cs" />
+    <Compile Include="Common\LoremIpsumConfiguration.cs" />
+    <Compile Include="Common\LoremIpsumGenerator.cs" />
+    <Compile Include="Common\NotifyPropertyChangedBase.cs" />
+    <Compile Include="Common\SequenceGenerator.cs" />
+    <Compile Include="Common\SequenceHelper.cs" />
+    <Compile Include="Common\StateChangeTracking.cs" />
+    <Compile Include="Common\StringHelper.cs" />
+    <Compile Include="Common\TypeHelper.cs" />
+    <Compile Include="ComponentManagement\ArchiveFilenameFactory.cs" />
+    <Compile Include="ComponentManagement\CommunicationController.cs" />
+    <Compile Include="ComponentManagement\ComponentFactory.cs" />
+    <Compile Include="ComponentManagement\ComponentController.cs" />
+    <Compile Include="ComponentManagement\ComponentManagementHelper.cs" />
+    <Compile Include="ComponentManagement\ComponentPluginBase.cs" />
+    <Compile Include="ComponentManagement\ComponentExtensionBase.cs" />
+    <Compile Include="ComponentManagement\ComponentManager.cs" />
+    <Compile Include="ComponentManagement\FolderAccessItem.cs" />
+    <Compile Include="ComponentManagement\FolderAccessItems.cs" />
+    <Compile Include="ComponentManagement\IFolderAccessItems.cs" />
+    <Compile Include="ComponentManagement\IArchiveFilenameFactory.cs" />
+    <Compile Include="ComponentManagement\ICommunicationController.cs" />
+    <Compile Include="ComponentManagement\IComponent.cs" />
+    <Compile Include="ComponentManagement\IComponentController.cs" />
+    <Compile Include="ComponentManagement\IComponentManager.cs" />
+    <Compile Include="ComponentManagement\ILogController.cs" />
+    <Compile Include="Configuration\IConfigurationItemAdvanced.cs" />
+    <Compile Include="Configuration\IConfigurationItemsAdvanced.cs" />
+    <Compile Include="FileStorage\HierarchicalFolder.cs" />
+    <Compile Include="FileStorage\IHierarchicalFolder.cs" />
+    <Compile Include="Installation\InstallationSettings.cs" />
+    <Compile Include="ComponentManagement\LogController.cs" />
+    <Compile Include="ComponentManagement\LogControllerSettings.cs" />
+    <Compile Include="ComponentManagement\LogMarshal.cs" />
+    <Compile Include="Compression\DeflateStreamCompressor.cs" />
+    <Compile Include="Compression\ICompressor.cs" />
+    <Compile Include="Compression\NullCompressor.cs" />
+    <Compile Include="Configuration\BinaryConfigurationSerializer.cs" />
+    <Compile Include="Configuration\ConfigurationGroup.cs" />
+    <Compile Include="Configuration\ConfigurationHelper.cs" />
+    <Compile Include="Configuration\ConfigurationShared.cs" />
+    <Compile Include="Configuration\ConfigurationItem.cs" />
+    <Compile Include="Configuration\ConfigurationItems.cs" />
+    <Compile Include="Configuration\CsvConfigurationSerializer.cs" />
+    <Compile Include="Configuration\IConfigurationGroupAdvanced.cs" />
+    <Compile Include="Configuration\IConfigurationItems.cs" />
+    <Compile Include="Configuration\IConfigurable.cs" />
+    <Compile Include="Configuration\IConfigurationSerializer.cs" />
+    <Compile Include="Configuration\IConfigurationGroup.cs" />
+    <Compile Include="Configuration\IConfigurationItem.cs" />
+    <Compile Include="Configuration\IniConfigurationSerializer.cs" />
+    <Compile Include="Configuration\XmlConfigurationSerializer.cs" />
+    <Compile Include="Converters\BinaryFileTypeSerializer.cs" />
+    <Compile Include="Converters\ConvertersHelper.cs" />
+    <Compile Include="Converters\ITypeSerializer.cs" />
+    <Compile Include="Converters\TypeSerializer.cs" />
+    <Compile Include="Converters\XmlFileTypeSerializer.cs" />
+    <Compile Include="Cryptography\CryptographyExtensions.cs" />
+    <Compile Include="Cryptography\CryptographyHelper.cs" />
+    <Compile Include="Cryptography\EncryptorConfiguration.cs" />
+    <Compile Include="Cryptography\IEncryptor.cs" />
+    <Compile Include="Cryptography\IEncryptorConfiguration.cs" />
+    <Compile Include="Cryptography\ISaltedPassword.cs" />
+    <Compile Include="Cryptography\NullEncryptor.cs" />
+    <Compile Include="Cryptography\SaltedPassword.cs" />
+    <Compile Include="Cryptography\StackableEncryptor.cs" />
+    <Compile Include="DelimiterSeparatedValues\ColumnEnclosingRuleEnum.cs" />
+    <Compile Include="DelimiterSeparatedValues\DsvColumn.cs" />
+    <Compile Include="DelimiterSeparatedValues\DsvColumnCollection.cs" />
+    <Compile Include="DelimiterSeparatedValues\DsvRow.cs" />
+    <Compile Include="DelimiterSeparatedValues\DsvRowCollection.cs" />
+    <Compile Include="DelimiterSeparatedValues\DsvSettings.cs" />
+    <Compile Include="DelimiterSeparatedValues\DsvTable.cs" />
+    <Compile Include="DelimiterSeparatedValues\RowProcessedEventArgs.cs" />
+    <Compile Include="FileStorage.MSdotNETZip\FileStore.cs" />
+    <Compile Include="FileStorage.MSdotNETFileSystem\FileStore.cs" />
+    <Compile Include="FileStorage\CompareAction.cs" />
+    <Compile Include="FileStorage\CompareResult.cs" />
+    <Compile Include="FileStorage\CompareType.cs" />
+    <Compile Include="FileStorage\CompressedFileStoreBase.cs" />
+    <Compile Include="FileStorage\CompressedFileStoreItem.cs" />
+    <Compile Include="FileStorage\CompressionStorageStrategy.cs" />
+    <Compile Include="FileStorage\FileStoreBase.cs" />
+    <Compile Include="FileStorage\FileStoreException.cs" />
+    <Compile Include="FileStorage\FileStorageHelper.cs" />
+    <Compile Include="FileStorage\FileStoreItem.cs" />
+    <Compile Include="FileStorage\ICompareResult.cs" />
+    <Compile Include="FileStorage\ICompressedFileStore.cs" />
+    <Compile Include="FileStorage\ICompressedFileStoreItem.cs" />
+    <Compile Include="FileStorage\ICompressedFileStoreItemAdvanced.cs" />
+    <Compile Include="FileStorage\IFileStore.cs" />
+    <Compile Include="FileStorage\IFileStoreAdvanced.cs" />
+    <Compile Include="FileStorage\IFileStoreItem.cs" />
+    <Compile Include="FileStorage\IFileStoreItemAdvanced.cs" />
+    <Compile Include="Installation\IInstalledPackage.cs" />
+    <Compile Include="Installation\IInstaller.cs" />
+    <Compile Include="Installation\InstalledPackage.cs" />
+    <Compile Include="Installation\Installer.cs" />
+    <Compile Include="Installation\InstallStateTracker.cs" />
+    <Compile Include="Installation\InstallType.cs" />
+    <Compile Include="Networking\ActivityLogsEventArgs.cs" />
+    <Compile Include="Networking\ActivityLogsEventType.cs" />
+    <Compile Include="Logging\ILogCombiner.cs" />
+    <Compile Include="Logging\LogCombiner.cs" />
+    <Compile Include="Logging\LogFilter.cs" />
+    <Compile Include="Logging\ILogSplitter.cs" />
+    <Compile Include="Logging\ILoggable.cs" />
+    <Compile Include="Logging\LogSplitter.cs" />
+    <Compile Include="Networking.Tcp\Client.cs" />
+    <Compile Include="Networking.Tcp\Server.cs" />
+    <Compile Include="Networking\BasicClientBase.cs" />
+    <Compile Include="Networking\BasicServerBase.cs" />
+    <Compile Include="Networking\Bridge.cs" />
+    <Compile Include="Networking\IRegistrationControllerAdvanced.cs" />
+    <Compile Include="Networking\NetworkShared.cs" />
+    <Compile Include="Networking\RegistrationTypeEnum.cs" />
+    <Compile Include="Packaging\IPackageFileStoreProvider.cs" />
+    <Compile Include="Logging\ArchivedLogs.cs" />
+    <Compile Include="Logging\IArchivedLogs.cs" />
+    <Compile Include="Logging\ITruncatable.cs" />
+    <Compile Include="Logging.FileEventLog\Log.cs" />
+    <Compile Include="Logging.WindowsEventLog\Log.cs" />
+    <Compile Include="Logging\CachedLog.cs" />
+    <Compile Include="Logging\ICachedLog.cs" />
+    <Compile Include="Logging\ILogInformation.cs" />
+    <Compile Include="Logging\ILogReader.cs" />
+    <Compile Include="Logging\ILogReaderWriter.cs" />
+    <Compile Include="Logging\ILogStatistics.cs" />
+    <Compile Include="Logging\ILogWriter.cs" />
+    <Compile Include="Logging\LogBase.cs" />
+    <Compile Include="Logging\LogEntry.cs" />
+    <Compile Include="Logging\Logs.cs" />
+    <Compile Include="Logging\LogEntryType.cs" />
+    <Compile Include="Logging\ILog.cs" />
+    <Compile Include="Logging\ILogEntry.cs" />
+    <Compile Include="Logging\LoggingHelper.cs" />
+    <Compile Include="Logging\LogStatistics.cs" />
+    <Compile Include="Networking.ChallengeControllers\NullChallengeController.cs" />
+    <Compile Include="Networking.ChallengeControllers\PasswordChallengeController.cs" />
+    <Compile Include="Networking.Http\Client.cs" />
+    <Compile Include="Networking.Http\Server.cs" />
+    <Compile Include="Networking.NamedPipes\Client.cs" />
+    <Compile Include="Networking.NamedPipes\NamedPipesShared.cs" />
+    <Compile Include="Networking.NamedPipes\Server.cs" />
+    <Compile Include="Networking.RegistrationControllers\NullRegistrationController.cs" />
+    <Compile Include="Networking.RegistrationControllers\TunnellingRegistrationController.cs" />
+    <Compile Include="Networking\ChannelAddress.cs" />
+    <Compile Include="Networking\ClientActual.cs" />
+    <Compile Include="Networking\ClientBase.cs" />
+    <Compile Include="Networking\ClientConfiguration.cs" />
+    <Compile Include="Networking\IChallengeController.cs" />
+    <Compile Include="Networking\IChannel.cs" />
+    <Compile Include="Networking\IChannelAddress.cs" />
+    <Compile Include="Networking\ChannelStates.cs" />
+    <Compile Include="Networking\IClient.cs" />
+    <Compile Include="Networking\IClientConfiguration.cs" />
+    <Compile Include="Networking\IMessage.cs" />
+    <Compile Include="Networking\IPayloadTypeInfo.cs" />
+    <Compile Include="Networking\IRegistrationController.cs" />
+    <Compile Include="Networking\IServer.cs" />
+    <Compile Include="Networking\IServerConfiguration.cs" />
+    <Compile Include="Networking\IService.cs" />
+    <Compile Include="Networking\IServiceCallback.cs" />
+    <Compile Include="Networking\ITransportConfiguration.cs" />
+    <Compile Include="Networking\ITransportConfigurationAdvanced.cs" />
+    <Compile Include="Networking\ITransportController.cs" />
+    <Compile Include="Networking\ITransportControllerAdvanced.cs" />
+    <Compile Include="Networking\ITransportEnvelopeHeader.cs" />
+    <Compile Include="Networking\ITransportStatistics.cs" />
+    <Compile Include="Networking\ITransportStatisticsGroup.cs" />
+    <Compile Include="Networking\Message.cs" />
+    <Compile Include="Networking\MessageEventArgs.cs" />
+    <Compile Include="Networking\NetworkingHelper.cs" />
+    <Compile Include="Networking\PayloadTypeInfo.cs" />
+    <Compile Include="Networking\ServerActual.cs" />
+    <Compile Include="Networking\ServerBase.cs" />
+    <Compile Include="Networking\ServerConfiguration.cs" />
+    <Compile Include="Networking\TransportConfiguration.cs" />
+    <Compile Include="Networking\TransportController.cs" />
+    <Compile Include="Networking\TransportEnvelope.cs" />
+    <Compile Include="Networking\TransportEnvelopeHeader.cs" />
+    <Compile Include="Networking\TransportStatistics.cs" />
+    <Compile Include="Networking\TransportStatisticsGroup.cs" />
+    <Compile Include="Packaging\ConnectedPackage.cs" />
+    <Compile Include="Packaging\DependencyPackage.cs" />
+    <Compile Include="Packaging\IConnectedPackage.cs" />
+    <Compile Include="Packaging\IDependencyPackage.cs" />
+    <Compile Include="Packaging\IPackage.cs" />
+    <Compile Include="Packaging\IPackageConfiguration.cs" />
+    <Compile Include="Packaging\IPackageProvider.cs" />
+    <Compile Include="Packaging\Package.cs" />
+    <Compile Include="Packaging\PackageConfiguration.cs" />
+    <Compile Include="Packaging\PackageProvider.cs" />
+    <Compile Include="Packaging.MSdotNETZip\PackageFileStoreProvider.cs" />
+    <Compile Include="PipeAndFilter\ExceptionEventArgs.cs" />
+    <Compile Include="PipeAndFilter\FilterBase.cs" />
+    <Compile Include="PipeAndFilter\IFilter.cs" />
+    <Compile Include="PipeAndFilter\IPipeline.cs" />
+    <Compile Include="PipeAndFilter\IPipelineItem.cs" />
+    <Compile Include="PipeAndFilter\Pipeline.cs" />
+    <Compile Include="PipeAndFilter\PipelineItemBase.cs" />
+    <Compile Include="PipeAndFilter\PreProcessFilterEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\Cancel.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\CommunicationInformationResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\EnableDisableInstalledPackage.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\EnableDisableInstalledPackageResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\EnableDisablePackage.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\EnableDisablePackageResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\FileCommand.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\FileInformation.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetFileComplete.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetFileRequest.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetFileRequestResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetFolderInformationRequest.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetFolderInformationResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetLogsComplete.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetLogs.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetLogsResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\GetServiceInformation.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\InstalledPackageDependencyChain.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\InstalledPackageDependencyChainResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\InstalledPackageReferenceBy.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\InstalledPackageReferencedByResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\InstallPackage.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\InstallPackageResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\IsSessionAlive.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ListInstalledPackagesResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ListPackagesResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ListServicesResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\Logout.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\Ping.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\FileTransferFeedback.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\FileTransferThrottle.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\FileSegment.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\PutFileComplete.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\PutFileInformation.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\Error.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\Login.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\LoginResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ReadInstalledCustomConfiguration.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ReadInstalledCustomConfigurationResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ReadPackageCustomConfiguration.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ReadPackageCustomConfigurationResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\RestartAllServicesResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ScanForComponentsResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ServiceCommand.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ServiceCommandResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ServiceInformation.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ServiceManagerDetails.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\LoginRequestResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\PutFileRequestResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ServiceDetails.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\StartAllServicesResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\StopAllServices.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\StopAllServicesResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\UnInstallAllPackagesResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\UnInstallPackage.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\UnInstallPackageResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\WriteInstalledCustomConfiguration.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\WriteInstalledCustomConfigurationResponse.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\WritePackageCustomConfiguration.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\WritePackageCustomConfigurationResponse.cs" />
+    <Compile Include="ServiceManagement\CachedServiceRequest.cs" />
+    <Compile Include="ServiceManagement\ComponentState.cs" />
+    <Compile Include="ServiceManagement\IService.cs" />
+    <Compile Include="ServiceManagement\IServiceManager.cs" />
+    <Compile Include="ServiceManagement\RequestResponseCommands.cs" />
+    <Compile Include="ServiceManagement.RequestResponseTypes\ServiceManagerServices.cs" />
+    <Compile Include="ServiceManagement\RequestResponseBase.cs" />
+    <Compile Include="ServiceManagement\ServiceExtensionBase.cs" />
+    <Compile Include="ServiceManagement\ServiceManagementHelper.cs" />
+    <Compile Include="ServiceManagement\ServiceManager.cs" />
+    <Compile Include="ServiceManagement\ServicePluginBase.cs" />
+    <Compile Include="ServiceManagement\ServiceRequest.cs" />
+    <Compile Include="ServiceManagement\ServiceResponse.cs" />
+    <Compile Include="ServiceManagement\ServicesCommands.cs" />
+    <Compile Include="ComponentManagement\SupportsComponentDesignationRequest.cs" />
+    <Compile Include="ComponentManagement\SupportsComponentDesignationResponse.cs" />
+    <Compile Include="Threading\IThreadBase.cs" />
+    <Compile Include="Threading\ThreadBase.cs" />
+    <Compile Include="Threading\ThreadCancelToken.cs" />
+    <Compile Include="Threading\ThreadingHelper.cs" />
+    <Compile Include="Threading\ThreadWorker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_Resources\LoremIpsum.resource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_Resources\LoremIpsum.resource.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_License\dodSON Software Library License %28MIT%29.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
