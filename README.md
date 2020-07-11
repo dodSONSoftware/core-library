@@ -31,3 +31,7 @@ This is because **.Net Core** does not have the concept of application domains; 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Please, feel free to create feature branches and make them your own. Nothing would please me more than to see this library grow.
