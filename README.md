@@ -21,8 +21,8 @@ This is because **.Net Core** does not have the concept of application domains; 
 
 ## Built With
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) - Visual Studio 2019 [Community Edition]
-* [.Net Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework) - .Net Frameworks
+* [Visual Studio 2019 [Community Edition]](https://visualstudio.microsoft.com/vs/)
+* [.Net Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework)
 
 ## Authors
 
