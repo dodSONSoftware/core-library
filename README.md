@@ -8,7 +8,7 @@ Download the [dodSON Software Core Library Help](https://1drv.ms/u/s!Ap-545RFn6f
 
 ### Prerequisites
 
-This library has been built against **.Net Framework 4.6**.
+This library was last built against **.Net Framework 4.6**.
 
 To compile for **.Net Core** you must remove the following namespaces:
   * Addon
@@ -22,7 +22,7 @@ This is because **.Net Core** does not have the concept of application domains; 
 ## Built With
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) - Visual Studio 2019 [Community Edition]
-* [.Net Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework) - .Net Framework 4.6
+* [.Net Frameworks](https://dotnet.microsoft.com/download/dotnet-framework) - .Net Frameworks
 
 ## Authors
 
