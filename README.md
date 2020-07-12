@@ -4,7 +4,8 @@ The dodSON Software Core Library abstracts common programming tasks into sets of
 
 ### Help File
 
-Download the [dodSON Software Core Library Help](https://1drv.ms/u/s!Ap-545RFn6fujTYHfNDwAxYQ9Yc8?e=iTWh1e) file for technical details and examples for every namespace.
+The dodSON Software Core Library Help file is part of the repository, it can be found in the root directory.
+You can, also, download the [dodSON Software Core Library Help](https://1drv.ms/u/s!Ap-545RFn6fujTYHfNDwAxYQ9Yc8?e=iTWh1e) file.
 
 ### Prerequisites
 
