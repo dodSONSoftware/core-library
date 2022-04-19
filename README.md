@@ -12,8 +12,8 @@ You can, also, download the [dodSON Software Core Library Help](https://1drv.ms/
 This library was last built against **.Net Framework 4.6**.
 
 To compile for **.Net Core** you must remove the following namespaces:
-  * Addon
   * AppDomain
+  * Addon
   * ComponentManagement
   * ServiceManagement
   * ServiceManagement.RequestResponseTypes
